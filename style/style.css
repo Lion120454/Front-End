@@ -17,12 +17,3 @@
     line-height: 50px;/* Отступ от верха*/
     text-decoration: none;
 }
-.page-header_logo
-{
-    margin: 0 25px; /*Отступы между словами*/
-    color: rgb(145, 255, 154);/*Цвет текста*/
-    font-weight: 600;/*Ширина текста*/
-    font-size: 30px;/*Размер текста*/
-    line-height: 25px;/* Отступ от верха*/
-    text-decoration: none;
-}
