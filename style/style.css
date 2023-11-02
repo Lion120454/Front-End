@@ -5,15 +5,147 @@
     font-weight: 400;
     font-style: normal;
     line-height: 1.375;
-    background-color: rgb(82, 82, 82);
+    background-color: rgb(255, 255, 255);
+}
+
+.page-header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.page-header::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222,222,222,0.5);
+    @supports(backdrop-filter: blur(10px))
+    {
+        backdrop-filter: blur(10px);
+        background-color: rgba(222,222,222,0.5);
+    }
+}
+
+.page-header_container
+{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1414px;
+    width: 100%;
+    position: relative;
+    
+}
+
+.page-header_logo
+{
+    margin-right: 237px;
+    display: inline-block;
+    width: 202px;
+    height: 147px;
+}
+
+.page-header_logo-img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.page-header_nav
+{
+    display: inline-block;
+    margin-right: 230px;
 }
 
 .page-header_nav-link
 {
     margin: 0 25px; /*Отступы между словами*/
-    color: rgb(255, 202, 102);/*Цвет текста*/
+    color: rgb(0, 0, 0);/*Цвет текста*/
     font-weight: 600;/*Ширина текста*/
     font-size: 18px;/*Размер текста*/
-    line-height: 50px;/* Отступ от верха*/
+    line-height: 25px;/* Отступ от верха*/
     text-decoration: none;
+}
+
+.page-header_user-btn
+{
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #000000;
+}
+
+.home
+{
+    padding-top: 147px;
+}
+
+.main-header
+{
+    padding: 100px 0;
+}
+
+.main-header_title,
+.main-header_text
+{
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lora",sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: normal;
+    color: #000000;
+}
+.main-header_title
+{
+    margin: 0 0 70px;
+}
+
+.main-header_picture
+{
+    display: block;
+    margin-bottom: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.main-header_img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.main-header_picture::before
+{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 16.927%;
+}
+
+.main-header_text
+{
+    margin: 0 auto;
+    max-width: 948px;
+    width: 100%;
 }

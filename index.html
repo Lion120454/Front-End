@@ -12,18 +12,40 @@
   </head>
 
   <body class="body">
-
+    
     <header class="page-header">
-      <a href="=index.html" class="page-header_logo">Логотип</a>
+      <div class="page-header_container">
+
+        <a href="=index.html" class="page-header_logo">
+          <img src="Image/logo.svg" class="page-header_logo-img"/>
+        </a>
+
         <nav class="page-header_nav">
           <a href="#" class="page-header_nav-link">Мероприятия</a>
           <a href="#" class="page-header_nav-link">Блог</a>
           <a href="#" class="page-header_nav-link">О нас</a>
           <a href="#" class="page-header_nav-link">Контакты</a>
+        </nav>
+        
+        
+        <a href="#" class="btn page-header_user-btn">Войти</a>
+      
+      </div>
+    </header>
+
+
 
     <main class="main">
       <div class="home">
-        <header class="main-header home_main-header"></header>
+        
+        <header class="main-header home_main-header">
+          <h1 class="main-header_title">Арт—пространство</h1>
+          <picture class="main-header_picture">
+            <img src="Image/LENNI.svg" class="main-header_img"/>
+          </picture>
+          <p class="main-header_text">для людей, горящих сердцем и делом место для настоящего</p>
+        </header>
+
         <section class="offers home_offers"></section>
         <section class="about home_about"></section>
         <section class="upcoming home_upcoming"></section>
