@@ -1,12 +1,12 @@
 @font-face {
   font-family: "mak";
-  src: local("MAK-bold"), url("../assets/fonts/MAK-bold.woff") format("woff");
+  src: local("MAK-bold"), url("/src/assets/fonts/MAK-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "mak";
-  src: local("MAK-light"), url("../assets/fonts/MAK-light.woff") format("woff");
+  src: local("MAK-light"), url("/src/assets/fonts/MAK-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -28,7 +28,7 @@ body {
           flex-direction: column;
   min-height: 100vh;
   background-color: #dedede;
-  background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
+  background-image: url(/src/assets/images/noise.png), url(/src/assets/images/bg.png);
   background-position: 0 0, 0 0;
   background-size: auto, 100% auto;
   background-repeat: repeat, repeat-y;
@@ -61,6 +61,37 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 40px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  outline: none;
+  color: #000000;
+  font-weight: 600px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+}
+:active {
+  background-color: #000000;
+  color: #ffffff;
+}
 .page-header {
   top: 0;
   left: 0;
@@ -86,7 +117,13 @@ img {
 .page-header__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,11 +133,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
-  max-width: 1414px;
-  width: 100%;
-  position: relative;
 }
 .page-header__logo {
   display: inline-block;
@@ -122,4 +154,10 @@ img {
   line-height: 25px;
   /* Отступ от верха*/
   text-decoration: none;
+}
+@media (hover: hover) {
+  :hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
 }
