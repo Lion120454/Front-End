@@ -19,10 +19,10 @@
         </header>
 
         <section class="offers home_offers"></section>
-        <section class="about home_about"></section>
+        @@include('block/about.html', {class: 'home__about'})
         <section class="upcoming home_upcoming"></section>
         <section class="listing home_listing"></section>
-        <section class="contacts home_contacts"></section>
+        @@include('block/contacts.html', {class: 'home__contacts'})
         <div class="doit home_doit"></div>
 
       </div>
