@@ -1,24 +1,35 @@
-.link
-{
+.link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    height: 0;
     font-weight: 600;
     font-size: 16px;
     color: @black;
     transition: color 0.2s;
-    &:hover
-    {
-        color: @red;
+    text-decoration: none;
+
+    @media @bw1020 {
+        font-size: 14px;
     }
-    &:active
-    {
-        color: @red;
+
+    &:hover {
+        @media (hover: hover) {
+            color: @red_dark;
+        }
     }
-    &__icon
-    {
-        margin-left: 20px;
+    &:active {
+        color: @red_dark;
+    }
+    &--vertical {
+        flex-direction: column;
+        height: 132px;
+        width: 128px;
+    }
+    &--h0 {
+        height: 0; // чтобы убрать кликабельность между названием ссылки и иконкой
+    }
+    &__name,
+    &__icon {
+        cursor: pointer;
     }
 }

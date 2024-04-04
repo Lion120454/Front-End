@@ -1,88 +1,86 @@
-.field
-{
-    &__title
-    {
+.field {
+    display: flex;
+    flex-direction: column;
+
+    &__input,
+    &__textarea,
+    &__select {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: @white;
+        font-size: 16px;
+        line-height: 1.375;
+    }
+
+    // для жирного заголовка поля
+    &__title {
+        display: block;
         margin: 0 0 10px;
-        font-weight: 700;
-        font-family: @font1;
         font-size: 18px;
+        font-weight: 700;
         line-height: 25px;
-        color: @block;
-        &--mb7
-        {
-            margin-bottom: 7px;
+        color: @black;
+
+        @media @bw650 {
+            font-size: 16px;
         }
     }
-    &__inputs
-    {
-        display: flex;
-        gap: 15px;
 
-    }
-
-    &__select,
-    &_input,
-    &__textarea
-    {
-        box-sizing: border-box;
-        border: none;
-        padding: 17px 20px 16px;
-        width: 100%;
-        
-        border-radius:5px ;
-        background-color: @white;
-        font-weight: 16px;
+    // для обычной подписи поля
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 1.3;
         color: @black;
     }
 
-    &__select,
-    &_input
-    {
+    &__input {
+        height: 55px;
+        padding: 0 20px;
+    }
+
+    &__textarea {
+        height: 150px;
+        padding: 20px;
+
+        @media @bw768 {
+            height: 235px;
+        }
+    }
+
+    &__select {
+        height: 55px;
+        padding: 0 20px;
+    }
+
+    &__date-inputs {
+        display: flex;
+        width: 100%;
+        max-width: 251px;
         height: 55px;
     }
 
-    &__textarea
-    {
-        height: 150px;
-    }
+    &__date-input {
+        box-sizing: border-box;
+        display: block;
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: @white;
+        padding: 0 5px;
+        font-size: 16px;
+        line-height: 1.375;
+        text-align: center;
 
-    &__input
-    {
-
-        &--w55
-        {
-            width: 55px;
-        }
-        &--w110
-        {
-            width: 110px;
-        }
-        &--datetime
-        {
-            padding: 17px 13px 16px;
-            text-align: center;
-        }
-        &::placeholder
-        {
-            font-size: 16px;
-            color: #6c6c6c;
-        }
-
-        &__label
-        {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 16px;
-            line-height: 22px;
-            color: @black;
-            &--c
-            {
-                font-weight: 700;
-                font-family: @font1;
-                font-size: 18px;
-                line-height: 25px;
-                color: @block;
-            }
+        &--110w {
+            flex-grow: 1;
+            margin-right: 0;
         }
     }
 }

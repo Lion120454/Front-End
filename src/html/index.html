@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
-//ghbvdrhde
-@@include('blocks/head.html')
+  
+  @@include('blocks/head.html')
 
   <body class="body">
-    
     @@include('blocks/page-header.html')
 
     <main class="main">
       <div class="home">
-        
-        <header class="main-header home_main-header">
-          <h1 class="main-header_title">Арт—пространство</h1>
-          <picture class="main-header_picture">
-            <img src="src/assets/images/Lenni.svg" class="main-header_img"/>
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">Арт - пространство</h1>
+          <picture class="main-header__picture">
+            <img
+              src="assets/images/LENNI.svg"
+              class="main-header__picture-img"
+              alt="logo"
+            />
           </picture>
-          <p class="main-header_text">для людей, горящих сердцем и делом место для настоящего</p>
+          <p class="main-header__text">
+            для людей, горящих сердцем и делом<br> место для настоящего
+          </p>
         </header>
+        <!-- prettier-ignore -->
+        @@include('blocks/offers.html', {"class": "home__offers"})
 
-        <section class="offers home_offers"></section>
-        @@include('block/about.html', {class: 'home__about'})
-        <section class="upcoming home_upcoming"></section>
-        <section class="listing home_listing"></section>
-        @@include('block/contacts.html', {class: 'home__contacts'})
-        <div class="doit home_doit"></div>
+        @@include('blocks/about.html', {"class": "home__about"})
 
+        @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
+
+        @@include('blocks/contacts.html', {"class": "home__contacts"})
+
+        <div class="doit home__doit">
+          <div class="doit__container">
+            <p class="doit__text">
+              <span class="doit__text-part-1">Просто делайте,</span>
+              <span class="doit__text-part-2">что нравится,</span>
+              <span class="doit__text-part-3">а мы вам поможем</span>
+            </p>
+          </div>
+        </div>
       </div>
-      
-      @@include('blocks/page-footer.html')
+    </main>
 
-      @@include('blocks/event-pp.html')
+    @@include('blocks/page-footer.html') @@include('blocks/event-pp.html')
   </body>
 </html>
